@@ -32,13 +32,13 @@ public class BishopBlack implements Figure {
         for (int index = 0; index < size; index++) {
             x += deltaX;
             y += deltaY;
-            steps[index] = Cell.findBy(x,y);
+            steps[index] = Cell.findBy(x, y);
         }
         return steps;
     }
 
     private boolean isDiagonal(Cell source, Cell dest) {
-        return ((Math.abs((dest.getX() - source.getX())) == (Math.abs((dest.getY() - source.getY())))));
+        return Math.abs((dest.getX() - source.getX())) == (Math.abs((dest.getY() - source.getY())));
     }
 
     @Override

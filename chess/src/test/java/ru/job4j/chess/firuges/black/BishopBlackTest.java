@@ -33,7 +33,8 @@ public class BishopBlackTest {
 
     @Test
     public void copyTest() {
-        BishopBlack black = new BishopBlack(Cell.C2);
-        assertThat(new BishopBlack(Cell.C2), is(black.copy(Cell.C2)));
+        BishopBlack black = new BishopBlack(Cell.C1);
+        Figure figure = black.copy(Cell.F4);
+        assertThat(figure.position(), is(Cell.F4));
     }
 }
